@@ -21,7 +21,8 @@ int main()
             }
             str[j] = '\0';
         }
-        printf("\n");
+        printf("\n\n");
+
     }
     return 0;
 }
