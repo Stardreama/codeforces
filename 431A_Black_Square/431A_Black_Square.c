@@ -19,6 +19,7 @@ int main()
 
         sum += num[str[j] - '1'];
     }
+    
     printf("%d", sum);
     return 0;
 }

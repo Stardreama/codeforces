@@ -13,5 +13,6 @@ int main()
         j=(n-y)/x;
         printf("%d\n",j*x+y);
     }
+    
     return 0;
 }

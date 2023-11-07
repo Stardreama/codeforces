@@ -22,7 +22,6 @@ int main()
             str[j] = '\0';
         }
         printf("\n\n");
-
     }
     return 0;
 }
