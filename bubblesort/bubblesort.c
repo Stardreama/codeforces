@@ -7,15 +7,15 @@ int main()
 {
     int num[10] = {9, 6, 8, 3, 4, 5, 7, 2, 1, 10};
     int i, j, temp;
-    for (j = 0; j < 9; j++)
+    for (i = 0; i < 10 - 1; i++)
     {
-        for (i = j + 1; i > 0; i--)
+        for (j = 0; j < 10 - 1 - i; j++)
         {
-            if (num[i] < num[i - 1])
+            if (num[j] > num[j + 1])
             {
-                temp = num[i - 1];
-                num[i - 1] = num[i];
-                num[i] = temp;
+                temp = num[j];
+                num[j] = num[j + 1];
+                num[j + 1] = temp;
             }
         }
     }
