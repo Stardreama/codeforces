@@ -8,6 +8,7 @@ double jian(double x, double y);
 double cheng(double x, double y);
 double chu(double x, double y);
 void calu(double (*pf)(double, double));
+void ten_to_two(int x);
 int main()
 {
     int mode = 0;
@@ -16,10 +17,10 @@ int main()
     do
     {
         printf("请选择模式\n");
-        printf("**********************\n");
-        printf("**1.加法  2.减法*******\n");
-        printf("**3.乘法  4.除法*******\n");
-        printf("**5.退出    ***********\n");
+        printf("********************************************\n");
+        printf("**1.加法                2.减法    ***********\n");
+        printf("**3.乘法                4.除法    ***********\n");
+        printf("**5.十进制转为二进制     6.退出    ***********\n");
         scanf("%d", &mode);
 
         switch (mode)
@@ -37,6 +38,11 @@ int main()
             calu(chu);
             break;
         case 5:
+            printf("请输入要进行转换的数据\n");
+            scanf("%lf",&x);
+            ten_to_two((int)x);
+            break;
+        case 6:
             break;
         default:
             printf("请重新选择");
@@ -67,4 +73,15 @@ void calu(double (*pf)(double, double))
     scanf("%lf%lf", &x, &y);
     ret = pf(x, y);
     printf("%f\n", ret);
+}
+void ten_to_two(int x)
+{
+    int yu = 1, N = 2, temp;
+    if (x != 0)
+    {
+        yu = x % 2;
+        x = (x - yu) / N;
+        ten_to_two(x);
+        printf("%d", yu);
+    }
 }
