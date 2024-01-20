@@ -11,3 +11,17 @@ int main()
     jinzhi(num);
     return 0;
 }
+<<<<<<< HEAD
+=======
+void jinzhi(int x)
+{
+    int yu = 1, N = 2, temp;
+    if (x != 0)
+    {
+        yu = x % 2;
+        x = (x - yu) / N;
+        jinzhi(x);
+        printf("%d", yu);
+    }
+}
+>>>>>>> 0bcf9048f3aac3bfc4edc4d65e21f29be3a70864
