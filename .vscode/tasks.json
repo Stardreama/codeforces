@@ -7,10 +7,9 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                //"${file}",
-                "*.c",
+                "${file}",
                 "-o",
-                "${fileDirname}\\a.exe"
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
                 "cwd": "${fileDirname}"
